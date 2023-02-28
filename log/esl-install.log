@@ -1,0 +1,215 @@
+[2023-02-27T15:09:19+0800]: The current system has an external network. Checking the current operating system
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   676  100    27  100   649    100   2404 --:--:-- --:--:-- --:--:--  2412
+{"errcode":0,"errmsg":"ok"}[2023-02-27T15:10:12+0800]: Installing service, about five minutes, please wait
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   676  100    27  100   649    106   2562 --:--:-- --:--:-- --:--:--  2555
+{"errcode":0,"errmsg":"ok"}[2023-02-27T15:10:39+0800]: Installing service, about five minutes, please wait
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   676  100    27  100   649    105   2542 --:--:-- --:--:-- --:--:--  2545
+{"errcode":0,"errmsg":"ok"}[2023-02-27T15:11:37+0800]: Installing service, about five minutes, please wait
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   676  100    27  100   649     98   2366 --:--:-- --:--:-- --:--:--  2368
+{"errcode":0,"errmsg":"ok"} [1;31m 2023-02-27T15:19:32+0800 The current system does not have an internet, and offline installation script is being executed [0m
+ [1;31m 2023-02-27T15:21:42+0800 The current system does not have an internet, and offline installation script is being executed [0m
+ [1;31m 2023-02-27T15:21:42+0800 The current server has no internet, please execute the offline installation script /usr/local/esl/scripts/function_ Scripts/docker-install-and-uninstall.sh [0m
+[2023-02-27T15:22:06+0800]: The current system has an external network. Checking the current operating system
+[2023-02-27T15:22:06+0800]: Installing service, about five minutes, please wait
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   676  100    27  100   649     99   2385 --:--:-- --:--:-- --:--:--  2394
+{"errcode":0,"errmsg":"ok"}2023-02-27T15:22:38+0800: The current system has an external network. Checking the current operating system
+2023-02-27T15:22:38+0800: Installing service, about five minutes, please wait
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   676  100    27  100   649    100   2414 --:--:-- --:--:-- --:--:--  2412
+{"errcode":0,"errmsg":"ok"}2023-02-27T15:23:23+0800: The current system has an external network. Checking the current operating system
+2023-02-27T15:23:23+0800: Installing service, about five minutes, please wait
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   676  100    27  100   649     93   2245 --:--:-- --:--:-- --:--:--  2245
+{"errcode":0,"errmsg":"ok"}2023-02-27T15:25:08+0800: The current system has an external network. Checking the current operating system
+2023-02-27T15:25:08+0800: Installing service, about five minutes, please wait
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   676  100    27  100   649     97   2341 --:--:-- --:--:-- --:--:--  2342
+{"errcode":0,"errmsg":"ok"} [1;31m 2023-02-27T15:27:44+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:28:37+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:30:52+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:31:04+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:31:07+0800 [info] The firewall component is turned off [0m
+2023-02-27T15:31:39+0800: [info] stop firewalld services
+ [1;31m 2023-02-27T15:32:45+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:33:07+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:33:13+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:33:49+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:35:25+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:36:38+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:36:52+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:36:55+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:44:12+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:44:28+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:44:46+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:44:53+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:46:33+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:46:38+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:47:52+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:48:08+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:48:31+0800 [info] The firewall component is turned off [0m
+2023-02-27T15:48:59+0800: [info] stop firewalld services
+2023-02-27T15:49:27+0800: [info] stop firewalld services
+ [1;31m 2023-02-27T15:49:49+0800 [info] The firewall component is turned off [0m
+2023-02-27T15:52:56+0800: The current system has an external network. Checking the current operating system
+2023-02-27T15:52:56+0800: Installing service, about five minutes, please wait
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   676  100    27  100   649     91   2198 --:--:-- --:--:-- --:--:--  2192
+{"errcode":0,"errmsg":"ok"}2023-02-27T15:54:19+0800: The current system has an external network. Checking the current operating system
+2023-02-27T15:54:19+0800: Installing service, about five minutes, please wait
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   679  100    27  100   652    103   2510 --:--:-- --:--:-- --:--:--  2517
+{"errcode":0,"errmsg":"ok"}2023-02-27T15:55:27+0800: [info] stop firewalld services
+2023-02-27T15:55:27+0800: The current system has an external network. Checking the current operating system
+2023-02-27T15:55:27+0800: Installing service, about five minutes, please wait
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   676  100    27  100   649    104   2512 --:--:-- --:--:-- --:--:--  2515
+{"errcode":0,"errmsg":"ok"} [1;31m 2023-02-27T15:55:28+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:56:18+0800 [info] The firewall component is turned off [0m
+2023-02-27T15:56:18+0800: The current system has an external network. Checking the current operating system
+2023-02-27T15:56:18+0800: Installing service, about five minutes, please wait
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   676  100    27  100   649     95   2295 --:--:-- --:--:-- --:--:--  2301
+{"errcode":0,"errmsg":"ok"} [1;31m 2023-02-27T15:56:19+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:56:58+0800 [info] The firewall component is turned off [0m
+2023-02-27T15:56:58+0800: The current system has an external network. Checking the current operating system
+2023-02-27T15:56:58+0800: Installing service, about five minutes, please wait
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   676  100    27  100   649    100   2421 --:--:-- --:--:-- --:--:--  2430
+{"errcode":0,"errmsg":"ok"} [1;31m 2023-02-27T15:56:59+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T15:59:07+0800 [info] The firewall component is turned off [0m
+2023-02-27T15:59:07+0800: The current system has an external network. Checking the current operating system
+2023-02-27T15:59:07+0800: Installing service, about five minutes, please wait
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   676  100    27  100   649    104   2506 --:--:-- --:--:-- --:--:--  2515
+{"errcode":0,"errmsg":"ok"} [1;31m 2023-02-27T15:59:13+0800 [info] The firewall component is turned off [0m
+2023-02-27T16:00:13+0800: The current system has an external network. Checking the current operating system
+2023-02-27T16:00:13+0800: Installing service, about five minutes, please wait
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   679  100    27  100   652     98   2385 --:--:-- --:--:-- --:--:--  2379
+{"errcode":0,"errmsg":"ok"}2023-02-27T16:00:23+0800: [info] stop firewalld services
+2023-02-27T16:31:29+0800: Selinux is closed
+2023-02-27T16:31:39+0800: Selinux is closed
+2023-02-27T16:31:42+0800: Selinux is closed
+2023-02-27T16:49:45+0800: The current system has an external network. Checking the current operating system
+2023-02-27T16:49:45+0800: Installing service, about five minutes, please wait
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   676  100    27  100   649    104   2513 --:--:-- --:--:-- --:--:--  2515
+{"errcode":0,"errmsg":"ok"} [1;31m 2023-02-27T16:49:52+0800 [info] The firewall component is turned off [0m
+ [1;31m 2023-02-27T16:52:01+0800 Shutting down selinux [0m
+2023-02-27T16:52:40+0800: Selinux is closed
+2023-02-27T16:52:53+0800: Selinux is closed
+ [1;31m 2023-02-27T16:53:20+0800 Shutting down selinux [0m
+2023-02-27T20:26:18+0800: The current system has an external network. Checking the current operating system
+2023-02-27T20:26:18+0800: Installing service, about five minutes, please wait
+2023-02-28T11:23:13+0800: The current system has an external network. Checking the current operating system
+ [1;31m 2023-02-28T11:23:13+0800 The current server has no internet, please execute the offline installation script /usr/local/esl/scripts/function_ Scripts/docker-install-and-uninstall.sh [0m
+2023-02-28T11:24:11+0800: The current system has an external network. Checking the current operating system
+ [1;31m 2023-02-28T11:24:11+0800 The current server has no internet, please execute the offline installation script /usr/local/esl/scripts/function_ Scripts/docker-install-and-uninstall.sh [0m
+2023-02-28T11:26:30+0800: The current system has an external network. Checking the current operating system
+ [1;31m 2023-02-28T11:26:30+0800 The current server has no internet, please execute the offline installation script /usr/local/esl/scripts/function_ Scripts/docker-install-and-uninstall.sh [0m
+2023-02-28T11:27:45+0800: The current system has an external network. Checking the current operating system
+2023-02-28T11:28:39+0800: The current system has an external network. Checking the current operating system
+2023-02-28T11:28:39+0800: Installing service, about five minutes, please wait
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   676  100    27  100   649     99   2380 --:--:-- --:--:-- --:--:--  2377
+{"errcode":0,"errmsg":"ok"} [1;31m 2023-02-28T11:28:45+0800 [info] The firewall component is turned off [0m
+2023-02-28T11:29:26+0800: The current system has an external network. Checking the current operating system
+2023-02-28T11:29:26+0800: Installing service, about five minutes, please wait
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   676  100    27  100   649    107   2595 --:--:-- --:--:-- --:--:--  2606
+{"errcode":0,"errmsg":"ok"} [1;31m 2023-02-28T11:29:33+0800 [info] The firewall component is turned off [0m
+2023-02-28T11:29:33+0800: Selinux is closed
+2023-02-28T11:37:12+0800: The current system has an external network. Checking the current operating system
+2023-02-28T11:37:12+0800: Installing service, about five minutes, please wait
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   676  100    27  100   649     97   2332 --:--:-- --:--:-- --:--:--  2334
+{"errcode":0,"errmsg":"ok"} [1;31m 2023-02-28T11:37:19+0800 [info] The firewall component is turned off [0m
+2023-02-28T11:37:19+0800: Selinux is closed
+2023-02-28T11:37:19+0800: The disk space meets the installation requirements. Installing the disk please wait
+2023-02-28T17:19:59+0800: The current system has an external network. Checking the current operating system
+2023-02-28T17:19:59+0800: Installing service, about five minutes, please wait
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   653  100    27  100   626     94   2199 --:--:-- --:--:-- --:--:--  2204
+{"errcode":0,"errmsg":"ok"} [1;31m 2023-02-28T17:20:06+0800 [info] The firewall component is turned off [0m
+2023-02-28T17:20:06+0800: Selinux is closed
+2023-02-28T17:20:06+0800: The disk space meets the installation requirements. Installing the disk please wait
+2023-02-28T17:21:16+0800: The current system has an external network. Checking the current operating system
+2023-02-28T17:21:16+0800: Installing service, about five minutes, please wait
+2023-02-28T17:21:20+0800: The current system has an external network. Checking the current operating system
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   635  100    27  100   608    100   2270 --:--:-- --:--:-- --:--:--  2277
+{"errcode":0,"errmsg":"ok"} [1;31m 2023-02-28T17:21:24+0800 [info] The firewall component is turned off [0m
+2023-02-28T17:21:24+0800: Selinux is closed
+2023-02-28T17:21:24+0800: The disk space meets the installation requirements. Installing the disk please wait
+2023-02-28T17:21:50+0800: The current system has an external network. Checking the current operating system
+2023-02-28T17:21:50+0800: Installing service, about five minutes, please wait
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   666  100    27  100   639    108   2559 --:--:-- --:--:-- --:--:--  2566
+{"errcode":0,"errmsg":"ok"} [1;31m 2023-02-28T17:21:57+0800 [info] The firewall component is turned off [0m
+2023-02-28T17:21:57+0800: Selinux is closed
+2023-02-28T17:21:57+0800: The disk space meets the installation requirements. Installing the disk please wait
+2023-02-28T17:22:20+0800: The current system has an external network. Checking the current operating system
+2023-02-28T17:22:20+0800: Installing service, about five minutes, please wait
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   666  100    27  100   639    108   2567 --:--:-- --:--:-- --:--:--  2576
+{"errcode":0,"errmsg":"ok"} [1;31m 2023-02-28T17:22:27+0800 [info] The firewall component is turned off [0m
+2023-02-28T17:22:27+0800: Selinux is closed
+2023-02-28T17:22:27+0800: The disk space meets the installation requirements. Installing the disk please wait
+2023-02-28T17:23:31+0800: The current system has an external network. Checking the current operating system
+2023-02-28T17:23:31+0800: Installing service, about five minutes, please wait
+2023-02-28T17:23:36+0800: The current system has an external network. Checking the current operating system
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   653  100    27  100   626    102   2377 --:--:-- --:--:-- --:--:--  2380
+{"errcode":0,"errmsg":"ok"} [1;31m 2023-02-28T17:23:39+0800 [info] The firewall component is turned off [0m
+2023-02-28T17:23:39+0800: Selinux is closed
+2023-02-28T17:23:39+0800: The disk space meets the installation requirements. Installing the disk please wait
+2023-02-28T17:23:58+0800: The current system has an external network. Checking the current operating system
+2023-02-28T17:24:17+0800: The current system has an external network. Checking the current operating system
+2023-02-28T17:25:06+0800: The current system has an external network. Checking the current operating system
+2023-02-28T17:25:21+0800: The current system has an external network. Checking the current operating system
+2023-02-28T17:25:21+0800: Installing service, about five minutes, please wait
+2023-02-28T17:25:27+0800: The current system has an external network. Checking the current operating system
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   657  100    27  100   630    100   2341 --:--:-- --:--:-- --:--:--  2350
+{"errcode":0,"errmsg":"ok"} [1;31m 2023-02-28T17:25:30+0800 [info] The firewall component is turned off [0m
+2023-02-28T17:25:30+0800: Selinux is closed
+2023-02-28T17:25:30+0800: The disk space meets the installation requirements. Installing the disk please wait
+2023-02-28T17:26:47+0800: The current system has an external network. Checking the current operating system
+2023-02-28T17:26:47+0800: Installing service, about five minutes, please wait
+2023-02-28T17:26:51+0800: The current system has an external network. Checking the current operating system
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   674  100    27  100   647    110   2636 --:--:-- --:--:-- --:--:--  2630100   674  100    27  100   647    109   2633 --:--:-- --:--:-- --:--:--  2630
+{"errcode":0,"errmsg":"ok"} [1;31m 2023-02-28T17:26:54+0800 [info] The firewall component is turned off [0m
+2023-02-28T17:26:54+0800: Selinux is closed
+2023-02-28T17:26:54+0800: The disk space meets the installation requirements. Installing the disk please wait

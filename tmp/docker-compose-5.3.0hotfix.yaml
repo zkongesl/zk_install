@@ -1,0 +1,275 @@
+version: '3'
+services:
+  nginx:
+    image: esl/nginx:1.20.2
+    network_mode: host
+    restart: "always"
+    privileged: true
+    environment:
+      - TZ=${TIME}
+      - LOCALHOST=${HOST}
+    volumes:
+      - /usr/local/esl/nginx:/application/nginx
+    command: /bin/bash -c "echo 'hello' && exec /application/nginx/sbin/nginx -g 'daemon off;'"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f $$LOCALHOST:80 || exit 1"]
+      interval: 1s
+      timeout: 3s
+      retries: 30
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
+    logging:
+        driver: "json-file"
+        options:
+           max-size: "100m"
+           max-file: "3"
+
+  zk-refactor-esl-business:
+    build: ./zk-refactor-esl-business/app
+    container_name: zk-refactor-esl-business
+    network_mode: host
+    restart: "always"
+    privileged: true
+    environment:
+      - TZ=${TIME}
+      - WEB_URL=${URL}
+    volumes:
+      - ./:/usr/local/esl
+      - ./myfonts:/usr/share/fonts
+      - ./arthas:/usr/local/esl/arthas
+      - /etc/localtime:/etc/localtime
+    healthcheck:
+      test: ["CMD-SHELL", "curl -I -m 6 -o /dev/null -s -w %{http_code} $$WEB_URL"]
+      interval: 1s
+      timeout: 3s
+      retries: 30
+    cap_add:
+      - SYS_PTRACE
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
+    logging:
+        driver: "json-file"
+        options:
+           max-size: "100m"
+           max-file: "3"
+  redis:
+    image: esl/redis:4.0.14
+    command: redis-server /etc/redis/redis.conf
+    network_mode: host
+    restart: "always"
+    privileged: true
+    environment:
+      - TZ=${TIME}
+    volumes: 
+      - ./redis/data:/data
+      - ./redis/conf/redis.conf:/etc/redis/redis.conf
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 1s
+      timeout: 3s
+      retries: 30
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
+    logging:
+        driver: "json-file"
+        options:
+           max-size: "100m"
+           max-file: "3"
+
+  mysql:
+    image: esl/mysql:5.7.35
+    network_mode: host
+    restart: "always"
+    privileged: true
+    environment:
+      - TZ=${TIME}
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+      - ./mysql/conf/my.cnf:/etc/mysql/my.cnf
+    healthcheck:
+      test: ["CMD", "mysqladmin","ping","-uroot","-p$$MY_PASS"]
+      interval: 1s
+      timeout: 3s
+      retries: 30
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
+    logging:
+        driver: "json-file"
+        options:
+           max-size: "100m"
+           max-file: "3"
+  emqtt:
+    image: esl/emqx:3.2.7
+    network_mode: host
+    restart: "always"
+    privileged: true
+    command: /bin/bash -c "/usr/local/emqx/bin/emqx start && /usr/local/emqx/bin/emqx_ctl admins passwd admin Zkong_1234 && tail -f /usr/local/emqx/log/erlang.log.1"
+    environment:
+      - TZ=${TIME}
+    volumes:
+      - ./emqtt/etc:/usr/local/emqx/etc
+      - /etc/localtime:/etc/localtime
+    healthcheck:
+      test: ["CMD", "/usr/local/emqx/bin/emqx_ctl", "status"] 
+      interval: 1s
+      timeout: 3s
+      retries: 30
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
+    logging:
+        driver: "json-file"
+        options:
+           max-size: "100m"
+           max-file: "3"
+  tracker:
+    image: esl/fastdfs:latest
+    command: sh tracker.sh 
+    environment:
+      - TZ=${TIME}
+    restart: "always"
+    privileged: true
+    networks:
+      mynet:
+        ipv4_address: 172.19.0.2
+    ports:
+      - 8300:8300
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
+    logging:
+        driver: "json-file"
+        options:
+           max-size: "100m"
+           max-file: "3"
+
+  storage:
+    image: esl/fastdfs:latest
+    command: sh storage.sh
+    restart: "always"
+    privileged: true
+    environment:
+      - TZ=${TIME}
+    volumes:
+      - ./fastdfs/storage:/data/fast_data 
+      - ./fastdfs/storage/conf/nginx.conf:/etc/nginx/conf/nginx.conf
+    networks:
+      mynet:
+        ipv4_address: 172.19.0.3
+    environment:
+      TZ: "Asia/Shanghai"
+      TRACKER_IP: "172.19.0.2:8300"
+      GROUP_NAME: "group1"
+    ports:
+      - 8400:8400
+      - 8410:8410
+    depends_on:
+       - tracker
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
+    logging:
+        driver: "json-file"
+        options:
+           max-size: "100m"
+           max-file: "3"
+
+  xxl_job:
+    build: ./xxl_job/app
+    network_mode: host
+    restart: "always"
+    privileged: true
+    environment:
+      - TZ=${TIME}
+      - LOCALHOST=${HOST}
+    volumes:
+      - ./:/usr/local/esl
+      - ./arthas:/usr/local/esl/arthas
+    healthcheck:
+      test: ["CMD-SHELL", "nc -vzw 2 $$LOCALHOST 8085"]
+      interval: 20s
+      timeout: 15s
+      retries: 30
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
+    logging:
+        driver: "json-file"
+        options:
+           max-size: "100m"
+           max-file: "3"
+  lcd:
+    build: ./lcd/app
+    network_mode: host
+    restart: "always"
+    privileged: true
+    environment:
+      - TZ=${TIME}
+      - LOCALHOST=${HOST}
+    volumes:
+      - ./:/usr/local/esl
+      - ./arthas:/usr/local/esl/arthas
+      - ./myfonts:/usr/share/fonts
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f $$LOCALHOST:7777/code/doCode || exit 1"]
+      interval: 1s
+      timeout: 3s
+      retries: 30
+    cap_add:
+      - SYS_PTRACE
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
+    logging:
+        driver: "json-file"
+        options:
+           max-size: "100m"
+           max-file: "3"
+  canal:
+    image: canal/canal-server:v1.1.4
+    privileged: true
+    restart: "always"
+    network_mode: host
+    environment:
+      - TZ=${TIME}
+      - LOCALHOST=${HOST}
+    healthcheck:
+      test: ["CMD-SHELL", "nc -vzw 2 127.0.0.1 11110"]
+      interval: 10s
+      timeout: 15s
+      retries: 30
+    volumes:
+      - ./canal/conf:/home/admin/canal-server/conf
+      - ./canal/logs:/home/admin/canal-server/logs
+    ports:
+      - 9100:9100
+      - 11110:11110
+      - 11111:11111
+      - 11112:11112
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
+    logging:
+        driver: "json-file"
+        options:
+           max-size: "100m"
+           max-file: "3"
+networks:
+  mynet:
+    ipam:
+      config:
+      - subnet: 172.19.0.0/16

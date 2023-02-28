@@ -1,0 +1,77 @@
+#!/ usr/bin/env bash
+
+#Date:2022-12-02
+#Author: Zkong
+#Version: v-5.4.0
+#Compatible with centos series version, test environment version 3.10.0-1160.el7.x86_ sixty-four
+#System compatibility kernel 4.15.0-137-generic Release 18.04
+# (GNU/General Public License version 2.0)
+# And away we go!
+
+source /usr/local/esl/scripts/env/env.sh
+source /usr/local/esl/scripts/function_scripts/log.sh
+source /usr/local/esl/scripts/check_os/*
+source /usr/local/esl/scripts/check_os/check_network.sh 
+source /usr/local/esl/scripts/check_os/check_os_name.sh
+#source ./alarm_template/init.sh
+#source ./alarm_template/Patrol_temp.sh
+
+ echo $dir
+function check_system(){
+
+          #获取网络状态
+          status=$( check_network )
+          if [ "$status" = 'true' ]
+          then
+             clear
+             echo ""
+             echo ""
+             echo ""
+           
+             echo "Installing service, about five minutes, please wait"
+             err "Installing service, about five minutes, please wait"
+             #获取操作系统
+             system_name=$( get_system_version )
+             if [ $system_name = "centos" ];
+             then
+                 #发送钉钉巡检内容
+                 source /usr/local/esl/scripts/function_scripts/alarm_project.sh 
+                 err "The current system is centos. Docker service is being installed"
+                 cp /usr/local/esl/scripts/package/docker-compose /usr/local/bin
+                 #安装docker服务
+                 yum_process=$(yum -y  install docker $rely_on >/dev/null 2>&1)
+                 if test $? -eq "0"
+                 then
+                     err "Starting Docker Service"
+                     #启动docker服务端
+                     systemctl daemon-reload && systemctl start docker && systemctl enable docker >/dev/null 2>&1
+                 else
+                     err "Online installation failed. Try to install offline"
+                     echo "Please execute the offline installation script/usr/local/esl/scripts/function_ Scripts/docker-install-and-uninstall.sh, and then build it" 
+                 fi
+             else
+                #乌班图直接退出安装
+                err "ubuntu"
+                exit
+             fi
+
+          elif [ "$status" = 'false' ]
+          then
+              #离线安装
+              echo  "The current server has no internet, please execute the offline installation script /usr/local/esl/scripts/function_ Scripts/docker-install-and-uninstall.sh"
+          else
+               exit -1
+          fi
+}
+ 
+
+
+main(){
+    check_system
+        
+    
+
+}
+
+
+main "$@"
